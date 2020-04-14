@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+ 
+ 	<bean id="mensajeCumple" class="com.spring.Mensaje">
+ 		<property name="texto" value="Feliz cumple!"></property>
+ 	</bean>
+
+ 	<bean id="mensajeNavidad" class="com.spring.Mensaje">
+ 		<property name="texto" value="Feliz Navidad!"></property>
+ 	</bean>
+
+ 	<bean id="mensajeComun" class="com.spring.Mensaje">
+ 		<property name="texto" value="Buen dia!"></property>
+ 	</bean>
+ 	
+ 	<bean id="largaDistancia" class="com.spring.Mensaje">
+ 		<property name="valorEnvio" value="350"></property>
+ 	</bean>
+
+ 	<bean id="cortaDistancia" class="com.spring.Mensaje">
+ 		<property name="valorEnvio" value="200"></property>
+ 	</bean>
+ 	
+ 	<bean id="mensajeDao" class="com.spring.MensajeDao"></bean>
+ 	
+ 	<bean id="mensajeService" class="com.spring.MensajeService">
+ 		<property name="mensajeDao" ref="mensajeDao"></property>
+ 	</bean>
+ 	
+</beans>
